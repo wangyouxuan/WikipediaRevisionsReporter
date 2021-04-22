@@ -1,5 +1,7 @@
 package edu.bsu.cs.model;
 
+import com.google.inject.Inject;
+
 import java.io.IOException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -9,7 +11,6 @@ import java.nio.charset.Charset;
 // This class may be considered "unused" because it is injected via Guice.
 @SuppressWarnings("unused")
 public final class WikipediaQueryEngine implements QueryEngine {
-
     private static final int NUMBER_OF_REVISIONS = 30;
 
     @Override
