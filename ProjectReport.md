@@ -2,23 +2,10 @@
 
 Youxuan Wang 
 
-## Markdown Tips
-
-If you are unfamiliar with MarkDown, check out 
-[the official documentation](https://guides.github.com/features/mastering-markdown/).
-
-Note that IntelliJ IDEA has a Markdown preview that you can access in 
-the upper-right of the editor. Also, since Markdown documents&mdash;like
-source code&mdash;should be human-readable, make sure you keep your lines
-short, as you can see I have done in my Markdown files.
-
-Please remove this subsection before submitting your report. 
 
 ## Challenge #1 Complete
 
-(Explain your solution to Challenge #1. If it is not complete, change
-the subsection title above to "Incomplete" and explain how far you got
-and where you got stuck.)
+I made changes the code bind(QueryEngine.class).to(FakeQueryEngine.class) to bind(QueryEngine.class).to(WikipediaQueryEngine.class). Since the first default application configuration uses FakeQueryEngine to simulate the network, I only need to change it to FakeQueryEngine so that the application uses the real WikipediaQueryEngine instead.
 
 ## Challenge #2 Complete
 
