@@ -11,6 +11,8 @@ import javafx.scene.layout.VBox;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public final class WikipediaAnalyzer extends VBox {
 
@@ -65,6 +67,8 @@ public final class WikipediaAnalyzer extends VBox {
                 stringBuilder.append(message);
                 stringBuilder.append("\n");
             }
+            //StringBuilder stringBuilder = response.revisions().stream().collect();
+
             outputArea.setText(stringBuilder.toString());
         } catch (IOException e) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
