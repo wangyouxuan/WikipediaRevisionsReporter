@@ -60,16 +60,16 @@ public final class WikipediaAnalyzer extends VBox {
     private void runQuery(String articleTitle) {
         try {
             QueryResponse response = engine.queryRevisions(articleTitle);
-            RevisionFormatter formatter = new RevisionFormatter();
-            StringBuilder stringBuilder = new StringBuilder();
-            for (Revision revision : response.revisions()) {
-                String message = formatter.format(revision);
-                stringBuilder.append(message);
-                stringBuilder.append("\n");
-            }
-            //StringBuilder stringBuilder = response.revisions().stream().map().collect(Collectors.joining(" "));
+            NewRevisionFormatter formatter = new NewRevisionFormatter();
+//            StringBuilder stringBuilder = new StringBuilder();
+//            for (Revision revision : response.revisions()) {
+//                String message = formatter.format(revision);
+//                stringBuilder.append(message);
+//                stringBuilder.append("\n");
+//            }
+            String output = response.revisions().stream().map(formatter::format).collect(Collectors.joining("\n"));
 
-            outputArea.setText(stringBuilder.toString());
+            outputArea.setText(output);
         } catch (IOException e) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Connection Problem");
