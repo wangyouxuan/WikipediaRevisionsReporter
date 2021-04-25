@@ -67,7 +67,7 @@ public final class WikipediaAnalyzer extends VBox {
                 stringBuilder.append(message);
                 stringBuilder.append("\n");
             }
-            //StringBuilder stringBuilder = response.revisions().stream().collect();
+            //StringBuilder stringBuilder = response.revisions().stream().map().collect(Collectors.joining(" "));
 
             outputArea.setText(stringBuilder.toString());
         } catch (IOException e) {
