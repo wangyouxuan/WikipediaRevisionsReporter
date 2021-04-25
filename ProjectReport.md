@@ -13,14 +13,11 @@ Because the default presentation of the datetime results is not very attractive,
 
 ## Challenge #3 Complete
 
-I called stream() on the list and useed higher-order functions to replace the for loop. To be specific, in runQuery function of class WikipediaAnalyzer, I called stream() to represent a sequence of objects in response.revisions(). Then, using  :: operator in map(), I get the format in formatter. Finally, I used collect( Collectors.joining()) to repack them and connect with each other. Becaseu this allows to use string, so I made the variable String output, and set it in setText().
+I called stream() on the list and used higher-order functions to replace the for loop. To be specific, in runQuery function of class WikipediaAnalyzer, I called stream() to represent a sequence of objects in response.revisions(). Then, using  :: operator in map(), I get the format in formatter. Finally, I used collect( Collectors.joining()) to repack them and connect with each other. Because this allows to use string, so I made the variable String output, and set it in setText().
 
 ## Reflection Question #1: Functional vs OO
 
-(Write one or more paragraphs comparing and contrasting the iterative and functional  
-approaches to string concatenation you explored in challenge #3. Which do you
-prefer, and why?)
-The iterative and functional approches can both run the prgram successfully, and both of them are easy to understand and create. However, I prefer the fuctional approches. In fact, in challenge 3, I only used one line to finish the for loop iteration which occupied for five lines. And in the progress of creating the code, I just needed to add new things in the call, like using map() and collect(). Besides, What I know there is a call named filter(), and it is easy and convinient for programmers to add new data and functions in it, with only one line. Due to the convineince of adding new data, I like to use it. But for the iterative approches, though it uses many code and lines to implement, it uses some variables and functions making programmers more easy 
+The iterative and functional approaches can both run the program successfully, and both are easy to understand and create. However, I prefer the functional approaches. In fact, in challenge 3, I only used one line to finish the for-loop iteration which occupied for five lines. And in the progress of creating the code, I just needed to add new things in the call, like using map () and collect (). Besides, What I know there is a call named filter (), and it is easy and convenient for programmers to add new data and functions in it, with only one line. Due to the convenience of adding new data, I like to use it. But for the iterative approaches, though it uses many code and lines to implement, it uses some variables and functions making programmers easier to understand. As a matter of fact, when writing the one line, there will be many complicated and nested call in the functional approach, but the new data added will not this is still convenient to me. Therefore, though both ways have their advantages and disadvantages, as far as I am concerned, the functional is more attract me. 
 
 ## Reflection Question #2: Polymorphism and Dependency Inversion
 
