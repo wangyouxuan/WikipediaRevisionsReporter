@@ -21,9 +21,5 @@ The iterative and functional approaches can both run the program successfully, a
 
 ## Reflection Question #2: Polymorphism and Dependency Inversion
 
-(Explain how polymorphism engendered dependency inversion in this little
-application. Be clear and precise here, as this is, in part, an assessment of
-your correct use of technical terminology.
-Consider, for example, where exactly is polymorphism used?
-Where exactly is a dependency inverted?)
+In this little application, take the class FakeQueryEngine and class WikipediaQueryEngine for example, they are two separate QueryEngines, but both belong to QueryEngine. In this sense, the interface QueryEngine is created to connect these two dependencies. By splitting the interface QueryEngine into a fake queryEngien and a real queryEngine, enables these two implementations are interchangeable. Thus, this is where polymorphism use, when having many classes which can belong to single class, we can just create an interface and unify the functions in each class.  As for the dependency inversion, rather than working with the specific classes like FakeQueryEngine and WikipediaQueryEngine, I want to work with a standard queryEngien interface that connect with both classes. Moreover, the code relying on the interface should only ever know about the interface. It should not know about any of the specific classes that implement the interface. Therefore, finally I can run either FakeQueryEngine or WikipediaQueryEngine by using the interface queryEngien but not themselves. 
 
